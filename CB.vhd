@@ -32,8 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity CB is
-    Port ( controll : in STD_LOGIC_VECTOR (9 downto 0);
-           input : in STD_LOGIC_VECTOR (4 downto 0);
+    Port ( input : in STD_LOGIC_VECTOR (4 downto 0);
+           controll : in STD_LOGIC_VECTOR (9 downto 0);
            output : out STD_LOGIC_VECTOR (6 downto 0));
 end CB;
 
