@@ -106,44 +106,82 @@ output   (1 downto 0) <=SB0Output(1 downto 0);
 SB1Input (1 downto 0) <=input(3 downto 2);
 output   (3 downto 2) <=SB1Output(1 downto 0);
 
-SB0Input (6 to     7) <=CB0Output(4 downto 3);
-CB0Input (1 to     2) <=SB0output(7 downto 6);
+
+SB0Input (6)<=CB0Output(4);
+SB0Input (7)<=CB0Output(3);
+
+CB0Input (1)<=SB0output(7);
+CB0Input (2)<=SB0output(6);
+
 
 output(15 downto 14)  <=CB0output(6 downto 5);
 CB0Input(4 downto 3)  <=input(15 downto 14);
 
-SB0Input(5 downto 4)  <=SB3Output(0 to 1);
-SB3Input(1 downto 0)  <=SB0Output(4 to 5);
 
-CB1Input(4 downto 3)  <=SB0Output(2 to 3);
-SB0Input(3 downto 2)  <=CB1Output(5 to 6);
+SB0Input(5) <=SB3Output(0);
+SB0Input(4) <=SB3Output(1);
 
-SB1Input(7 downto 6)  <=CB1Output(3 to 4);
-CB1Input(2 downto 1)  <=SB1Output(6 to 7);
+SB3Input(1)<=SB0Output(4);
+SB3Input(0)<=SB0Output(5);
+
+
+CB1Input(4)  <=SB0Output(2);
+CB1Input(3)  <=SB0Output(3);
+
+SB0Input(3)  <=CB1Output(5);
+SB0Input(2)  <=CB1Output(6);
+
+
+SB1Input(7)  <=CB1Output(3);
+SB1Input(6)  <=CB1Output(4);
+
+CB1Input(2)  <=SB1Output(6);
+CB1Input(1)  <=SB1Output(7);
+
 
 SB1Input(3 downto 2)  <=input(5 downto 4);
 output  (5 downto 4)  <=SB1Output(3 downto 2);
 
-SB1Input(5 downto 4)  <=SB2Output(0 to 1);
-SB2Input(1 downto 0)  <=SB1Output(4 to 5);
+
+SB1Input(5)  <=SB2Output(0);
+SB1Input(4)  <=SB2Output(1);
+
+SB2Input(1)  <=SB1Output(4);
+SB2Input(0)  <=SB1Output(5);
+
 
 SB2Input(3 downto 2)  <=input(7 downto 6);
 output  (7 downto 6)  <=SB2Output(3 downto 2);
 
+
 SB2Input(5 downto 4)  <=input(9 downto 8);
 output  (9 downto 8)  <=SB2Output(5 downto 4);
 
-SB2Input(7 downto 6)  <=CB2Output(3 to 4);
-CB2Input(2 downto 1)  <=SB2Output(6 to 7);
 
-SB3Input(3 downto 2)  <=CB2Output(5 to 6);
-CB2Input(4 downto 3)  <=SB3Output(2 to 3);
+SB2Input(7)  <=CB2Output(3);
+SB2Input(6)  <=CB2Output(4);
+
+CB2Input(2)  <=SB2Output(6);
+CB2Input(1)  <=SB2Output(7);
+
+
+SB3Input(3)  <=CB2Output(5);
+SB3Input(2)  <=CB2Output(6);
+
+CB2Input(4)  <=SB3Output(2);
+CB2Input(3)  <=SB3Output(3);
+
 
 output(11 downto 10)  <=SB3Output(5 downto 4);
 SB3Input(5 downto 4)  <=input(11 downto 10);
 
-SB3Input(7 downto 6)  <=CB3Output(3 to 4);
-CB3Input(2 downto 1)  <=SB3Output(6 to 7);
+
+SB3Input(6)  <=CB3Output(3);
+SB3Input(6)  <=CB3Output(4);
+
+CB3Input(2)  <=SB3Output(6);
+CB3Input(1)  <=SB3Output(7);
+
 
 output(13 downto 12)  <=CB3Output(6 downto 5);
 CB3Input(4 downto 3)  <=input(13 downto 12);
