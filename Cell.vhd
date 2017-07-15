@@ -83,8 +83,8 @@ begin
 
 CLB0: CLB port map(CB0Output(2),CB0Output(1 downto 0),controll(4  downto 0),CB0Input(0));
 CLB1: CLB port map(CB1Output(2),CB1Output(1 downto 0),controll(9  downto 5),CB1Input(0));
-CLB2: CLB port map(CB2Output(2),CB2Output(1 downto 0),controll(62 downto 66),CB2Input(0));
-CLB3: CLB port map(CB3Output(2),CB3Output(1 downto 0),controll(67 downto 71),CB3Input(0));
+CLB2: CLB port map(CB2Output(2),CB2Output(1 downto 0),controll(66 downto 62),CB2Input(0));
+CLB3: CLB port map(CB3Output(2),CB3Output(1 downto 0),controll(71 downto 67),CB3Input(0));
 
 
 SB0:  SB  port map(SB0Input,controll(35  downto 20 ),SB0Output);
